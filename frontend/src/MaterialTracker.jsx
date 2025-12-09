@@ -2,7 +2,7 @@ import './material-tracker.css';
 import React, { useState, useEffect } from 'react';
 import { Plus, Minus, CheckCircle, AlertCircle, FolderOpen, Search, Save, MapPin, LogOut, User, Calendar, Database } from 'lucide-react';
 
-const API_URL = process.env.REACT_APP_API_URL + "/api";
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 export default function MaterialTracker() {
   // ---------------------- CLUSTERS ----------------------
   const clusters = [
