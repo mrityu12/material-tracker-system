@@ -11,9 +11,14 @@ connectDB();
 
 // CORS configuration - IMPORTANT!
 app.use(cors({
-  origin: 'http://localhost:3000', // React app URL
-  credentials: true
+    origin: [
+        "https://material-tracker-system.vercel.app",
+        /\.vercel\.app$/,
+        "http://localhost:3000"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
 }));
+
 
 // Middleware
 app.use(bodyParser.json());
