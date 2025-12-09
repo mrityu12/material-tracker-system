@@ -23,6 +23,7 @@ export default function MaterialTracker() {
     { name: "SRUNGAVARAPUKOTA", cluster: "ARK" },
     { name: "TYADA", cluster: "ARK" },
     { name: "LAKKAVARAPUKOTA", cluster: "ARK" },
+    { name: "SLPM", cluster: "ARK" },
 
     // RGDA
     { name: "PARVATHIPURAM TOWN", cluster: "RGDA" },
@@ -51,7 +52,7 @@ export default function MaterialTracker() {
     { name: "NELLIMARLA", cluster: "VZM" },
 
     // VBL
-    { name: "GARIVIDI", cluster: "VBL" },
+    { name: "GARIVIDI", cluster: "VZM" },
     { name: "PARVATHIPURAM", cluster: "VBL" },
     { name: "DONKINAVALASA", cluster: "VBL" },
     { name: "GAJAPATINAGARAM", cluster: "VBL" },
@@ -84,7 +85,7 @@ export default function MaterialTracker() {
     { name: "KAMLUR", cluster: "KRDL" },
 
     // JDB
-    { name: "BHEJA", cluster: "JDB" },
+    { name: "BADIARPUR", cluster: "JDB" },
     { name: "DILMILLI", cluster: "JDB" },
     { name: "KUMAR MARANGA", cluster: "JDB" },
     { name: "NAKTISEMRA", cluster: "JDB" },
@@ -110,6 +111,10 @@ export default function MaterialTracker() {
     { name: "JARATI", cluster: "KRPU" },
     { name: "DUMIRIPUT", cluster: "KRPU" },
     { name: "JEYPORE", cluster: "KRPU" },
+
+    { name: "PENDURTHI", cluster: "MPM" },
+    { name: "KOTTAVALASA", cluster: "MPM" },
+    
 
     // PURI
     { name: "DELANG", cluster: "PURI" },
