@@ -1,13 +1,43 @@
-import React from 'react';
-import MaterialTracker from './MaterialTracker'; // <-- Add this import
-import './App.css';
+import React, { useState } from 'react';
+import Login from './components/auth/Login';
+import AdminDashboard from './components/admin/AdminDashboard';
+import WorkerDashboard from './components/worker/WorkerDashboard';
+import { clusters, stationsData, initialItems } from './utils/constants';
+import './index.css';
 
-function App() {
+export default function App() {
+  const [auth, setAuth] = useState(null);
+
+  const handleLogin = (authData) => {
+    setAuth(authData);
+  };
+
+  const handleLogout = () => {
+    setAuth(null);
+  };
+
+  if (!auth) {
+    return <Login onLogin={handleLogin} />;
+  }
+
+  if (auth.role === 'admin') {
+    return (
+      <AdminDashboard
+        username={auth.username}
+        authToken={auth.token}
+        onLogout={handleLogout}
+      />
+    );
+  }
+
   return (
-    <div className="App">
-      <MaterialTracker />   {/* <-- Render your full Material Tracker app here */}
-    </div>
+    <WorkerDashboard
+      username={auth.username}
+      authToken={auth.token}
+      onLogout={handleLogout}
+      clusters={clusters}
+      stationsData={stationsData}
+      initialItems={initialItems}
+    />
   );
 }
-
-export default App;
